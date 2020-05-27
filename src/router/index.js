@@ -12,7 +12,9 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    props:true
+
   },
   // {
   //   path: "/about",
@@ -44,13 +46,15 @@ const routes = [
   //   component:()=> import(/* webpackChunkName: "panama" */ "../views/Panama")
   // },
   {
-    path:'/details:id',
+    path:'/details/:slug',
     name:"destinationsDetails",
-    component:()=> import(/* webpackChunkName: "destinationsDetails" */ "../components/TheDestinationDetails")
+    component:()=> import(/* webpackChunkName: "destinationsDetails" */ "../components/TheDestinationDetails"),
+    props:true
   },
 ];
 
 const router = new VueRouter({
+  mode:'history',
   linkExactActiveClass:"classActive" ,
   routes
 });
