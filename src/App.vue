@@ -1,20 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <!-- <router-link to="/">Home</router-link> |
       <router-link to="/brazil">Brazil</router-link>
       <router-link to="/panama">Panama</router-link>
       <router-link to="/jamaica">Jamaica</router-link>
-      <router-link to="/hawai">Hawai</router-link>
+      <router-link to="/hawai">Hawai</router-link> -->
       <!-- <router-link to="/hawai">Hawai</router-link> -->
+    <TheNavigation />
 
 
 
-
-    </div>
     <router-view />
   </div>
 </template>
+
+<script>
+
+import TheNavigation from '@/components/TheNavigation.vue'
+export default {
+  components:{
+    TheNavigation
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -25,17 +34,6 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  padding:0 10px;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
