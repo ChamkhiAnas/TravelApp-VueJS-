@@ -8,9 +8,7 @@
       <!-- <router-link to="/hawai">Hawai</router-link> -->
     <TheNavigation />
 
-
-
-    <router-view />
+    <router-view :key="$route.path"/>
   </div>
 </template>
 
