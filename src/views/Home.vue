@@ -6,12 +6,12 @@
     </h1>
     <div class="destinations">
     <div v-for="dest in destinations" :key="dest.name">
-          <router-link :to="dest.slug">
+          <router-link :to="{name:'destinationsDetails',params:{id:dest.id}}">
             <h2>{{dest.name}}</h2>
           </router-link>
 
           <figure>
-            <router-link :to="dest.slug">
+            <router-link :to="{name:'destinationsDetails',params:{id:dest.id}}">
               <!-- <img :src="require(`/${dest.image}`)" :alt="dest.name">  -->
             <img :src="require(`../assets/${dest.image}`)" :alt="dest.name"> 
             </router-link>
